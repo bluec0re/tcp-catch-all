@@ -4,6 +4,8 @@ TCP Catch All
 A scapy based python script to open TCP servers on demand
 to catch all incoming TCP requests and log the sent data.
 
+[![asciicast](https://asciinema.org/a/4hv0ch50fham3r3a52brbpzzr.png)](https://asciinema.org/a/4hv0ch50fham3r3a52brbpzzr)
+
 Usage
 -----
 ```
@@ -36,6 +38,12 @@ Start to listen on eth0 and start servers for the ports 80 and 8080:
 
 ``
 ./catch-all-tcp.py -i eth0 -p 80 -p 8080
+``
+
+Send USR1 signal to process to shutdown specific servers
+
+``
+kill -USR1 <pid of process>
 ``
 
 Requirements
