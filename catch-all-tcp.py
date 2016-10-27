@@ -123,7 +123,7 @@ class TCPCatchAll:
         if not self._ports:
             return
 
-        self.log.info('Shutdowning %d servers. Waiting 5s for graceful close', len(self._ports))
+        self.log.info('Shutting down %d servers. Waiting 5s for graceful close', len(self._ports))
         for s, _ in self._ports.values():
             if not s:
                 continue
